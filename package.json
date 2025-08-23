@@ -1,0 +1,22 @@
+{
+  "name": "crm_petproject_python",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkazakova29/CRM_PetProject_Python.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkazakova29/CRM_PetProject_Python/issues"
+  },
+  "homepage": "https://github.com/nkazakova29/CRM_PetProject_Python#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0"
+  }
+}
