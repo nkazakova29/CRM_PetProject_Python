@@ -1,2 +1,2 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","4785","test_login","Tests","Sat Aug 23 18:35:16 UTC 2025","passed","Sat Aug 23 18:35:21 UTC 2025","","test_logintesting","",""
+"","6798","test_login","Tests","Sat Aug 23 19:03:33 UTC 2025","passed","Sat Aug 23 19:03:40 UTC 2025","","test_logintesting","",""
