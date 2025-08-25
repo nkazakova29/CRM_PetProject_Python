@@ -32,25 +32,30 @@ jobs:
     - name: Run tests with pytest
       run: pytest --alluredir=allure-results
       env:
-        PLAYWRIGHT_HEADLESS: "1"  # запускаем браузер headless
+        PLAYWRIGHT_HEADLESS: "1"
 
-    # 5. Устанавливаем Allure CLI вручную
+    # 5. Устанавливаем Java 17 для Allure
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: temurin
+        java-version: 17
+
+    # 6. Скачиваем и устанавливаем Allure CLI
     - name: Install Allure CLI
       run: |
-        wget https://github.com/allure-framework/allure2/releases/latest/download/allure-2.34.1.tgz -O allure.tgz
-        tar -zxvf allure.tgz
+        curl -sSL https://github.com/allure-framework/allure2/releases/download/2.34.1/allure-2.34.1.tgz | tar -xz
         sudo mv allure-2.34.1/bin/allure /usr/local/bin/allure
 
-    # 6. Проверяем версию Allure
+    # 7. Проверяем версию Allure
     - name: Check Allure version
       run: allure --version
 
-    # 7. Генерируем HTML-отчёт Allure
+    # 8. Генерируем HTML-отчёт Allure
     - name: Generate Allure Report
-      run: |
-        allure generate allure-results --clean -o allure-report
+      run: allure generate allure-results --clean -o allure-report
 
-    # 8. Деплоим отчёт на GitHub Pages
+    # 9. Деплоим отчёт на GitHub Pages
     - name: Deploy Allure report to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
       with:
