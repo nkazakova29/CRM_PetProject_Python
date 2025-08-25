@@ -32,5 +32,13 @@ class LoginPage:
             return True
         except:
             return False
+        
+        
+    def is_error_appeared(self):
+        try:
+            self.page.wait_for_selector("text=You must specify a valid username and password.", timeout=5000)
+            return True
+        except:
+            return False
     
     
