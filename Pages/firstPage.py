@@ -10,7 +10,7 @@ class LoginPage:
         self.page = page
         
     @allure.step("Open CRM website")
-    def open_login_page(self):
+    def open(self):
         with allure.step("Open CRM site"):
             self.page.goto(self.URL)
         
@@ -38,3 +38,4 @@ class LoginPage:
                 return True
             except:
                 return False
+            
